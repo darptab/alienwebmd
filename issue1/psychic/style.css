@@ -1,0 +1,329 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* start all css with a reset */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* font-size: 16px; */
+  font-family: 'Hammersmith One', sans-serif;
+  background: rgba(22, 18, 72, 1);
+  cursor: url(../images/alien_cursor.png) 16 35, auto;
+}
+
+body:active{
+    cursor: url(../images/alien_cursor_press.png) 16 35, auto;
+}
+
+a {
+  color: #ef3c31;
+  border: 5px solid transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid #fef494;
+      cursor: url(../images/alien_cursor_hover.png) 16 35, auto;
+}
+
+.gradient {
+  background: -moz-linear-gradient(top, rgba(167, 253, 252, 1) 0%, rgba(98, 95, 132, 1) 58%, rgba(22, 18, 72, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(167, 253, 252, 1)), color-stop(58%, rgba(98, 95, 132, 1)), color-stop(100%, rgba(22, 18, 72, 1)));
+  background: -webkit-linear-gradient(top, rgba(167, 253, 252, 1) 0%, rgba(98, 95, 132, 1) 58%, rgba(22, 18, 72, 1) 100%);
+  background: -o-linear-gradient(top, rgba(167, 253, 252, 1) 0%, rgba(98, 95, 132, 1) 58%, rgba(22, 18, 72, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(167, 253, 252, 1) 0%, rgba(98, 95, 132, 1) 58%, rgba(22, 18, 72, 1) 100%);
+  background: linear-gradient(to bottom, rgba(167, 253, 252, 1) 0%, rgba(98, 95, 132, 1) 58%, rgba(22, 18, 72, 1) 100%);
+}
+
+main {
+  width: 100%;
+  /* max-width: 1000px; */
+  margin: auto;
+}
+
+#mainContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  position: relative;
+}
+
+#kate {
+  position: absolute;
+  left: -50px;
+  top: 90px;
+  cursor: url(../images/alien_cursor_hover.png) 16 35, auto;
+}
+
+#crystalball {
+  position: absolute;
+  left: 380px;
+  top: 166px;
+    cursor: pointer;
+}
+
+#elixir {
+  position: absolute;
+  left: 530px;
+  top: 250px;
+    cursor: pointer;
+}
+
+.psychicTip {
+  position: absolute;
+  top: 260px;
+  left: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 4px solid #b73561;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1f27cf;
+  background-color: rgba(255, 255, 255, .6);
+  opacity: 0;
+}
+
+.ballTip {
+  position: absolute;
+  top: 150px;
+  left: 360px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 4px solid #b73561;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1f27cf;
+  background-color: rgba(255, 255, 255, .6);
+  opacity: 0;
+}
+
+.drinkTip {
+  position: absolute;
+  top: 180px;
+  left: 520px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 4px solid #b73561;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1f27cf;
+  background-color: rgba(255, 255, 255, .6);
+  opacity: 0;
+}
+
+#starContainer {
+  position: absolute;
+  left: 448px;
+  top: 228px;
+}
+
+#star {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+}
+
+#start {
+  width: 40px;
+  height: 40px;
+}
+
+footer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  width: 1000px;
+}
+
+/* // cards */
+
+#tarot {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #9aa6e7;
+  text-shadow: 2px 2px #2231cc;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  text-shadow: 2px 2px #2231cc;
+  background-color: rgba(22, 20, 71, 0.2);
+  padding: 5px;
+  width: 41%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px #1f27cf;
+}
+
+.top {
+  font-size: 16px;
+  text-align: center;
+  margin-left: -5px;
+}
+
+.fa-angle-down {
+  font-size: 18px;
+}
+
+.fa-angle-up {
+  font-size: 16px;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  /* padding: 2px; */
+}
+
+.cards {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  margin: auto;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.cardimg {
+  width: 250px;
+  cursor: pointer;
+}
+
+.row {
+  /* margin-left: 18px; */
+}
+
+.row p {
+  font-family: 'Open Sans', sans-serif;
+  color: #392d62;
+  text-shadow: none;
+  font-size: 12px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+/* @media (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+} */
+
+.cardgroup{
+  margin-top: 20px;
+  height: 440px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  font-family: 'Hammersmith One', sans-serif;
+  border-radius: 10px;
+  border: 4px solid #b73561;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f27cf;
+  background-color: rgba(255, 255, 255, .6);
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  margin-bottom: 16px;
+  margin-top: -30px;
+}
+
+.bottom{
+  width: 100%;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+  cursor: pointer;
+}
+
+#overlayMsg{
+  position: absolute;
+  top: 300px;
+  left: 240px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 4px solid #b73561;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f27cf;
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 0px 0px 200px #2231cc;
+    z-index: 200;
+}
+
+#close {
+  width: 100%;
+  height: 100%;
+}
+
+/* SCROLLBAR */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #8ab7c6;
+}
+
+::-webkit-scrollbar-corner {
+  background: #8ab7c6;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #c46a8a;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #72649d;
+}

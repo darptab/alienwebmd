@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Late Capitalism Diagnostics</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Inconsolata|Vollkorn|Yantramanav" rel="stylesheet">
+  <script src='script.js' type="text/javascript"></script>
+    <script src='jquery-3.3.1.min.js' type="text/javascript"></script>
+</head>
+
+<body>
+  <header>
+
+      <picture>
+        <source srcset="images/title_stacked.png" media="(max-width: 400px)">
+        <source srcset="images/title.png">
+        <img src="images/images/title.png" draggable="false" class="responsive" alt="Alien WebMD">
+      </picture>
+  </header>
+
+  <div class="container">
+
+    <div class="tab">
+      <h3>symptom<b>checker</b></h3>
+    </div>
+
+    <div class="quizbg">
+      <div class="quiz">
+
+        <form name="diagnostics">
+
+          <section>
+            <aside><img src="images/alien_diagnosis.gif" draggable="false" height="250" alt="alien"></aside>
+            <h2 class="quiz-question1">Where does it hurt?</h2>
+            <ul class="alien">
+              <li class="quiz-answer"><input type="radio" name="q1" value="A" id="1"><label for="1">Head</label></li>
+              <li class="quiz-answer"><input type="radio" name="q1" value="B" id="2"><label for="2">Body </label></li>
+              <li class="quiz-answer"><input type="radio" name="q1" value="C" id="3"><label for="3">Spirit</label></li>
+            </ul>
+            <div class="next1"><a href="#line1">Next</a></div>
+          </section>
+
+          <div id="line1"></div>
+
+          <section>
+            <h2 class="quiz-question2">Pain Measurement Scale: How much does it hurt?</h2>
+            <ul class="quiz-emoji">
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="A" id="4"><label for="4"><img src="images/sad.png" alt="sad" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="B" id="5"><label for="5"><img src="images/spooky.png" alt="spooky" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="C" id="6"><label for="6"><img src="images/eyesup.png" alt="eyes up" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="D" id="7"><label for="7"><img src="images/sigh.png" alt="sigh" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="E" id="8"><label for="8"><img src="images/yelling.png" alt="yelling" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="F" id="9"><label for="9"><img src="images/angry.png" alt="angry" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="G" id="10"><label for="10"><img src="images/wounded.png" alt="wounded" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="H" id="11"><label for="11"><img src="images/crying.png" alt="crying" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="I" id="12"><label for="12"><img src="images/notimpressed.png" alt="not impressed" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="J" id="13"><label for="13"><img src="images/nervoussmile.png" alt="nervous smile" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="K" id="14"><label for="14"><img src="images/dead.png" alt="dead" class="pd"></label></li>
+              <li class="quiz-answer-emoji"><input type="radio" name="q2" value="L" id="15"><label for="15"><img src="images/poop.png" alt="poop" class="pd"></label></li>
+            </ul>
+            <div class="next2"><a href="#line2">Next</a></div>
+          </section>
+
+
+          <div id="line2"></div>
+
+          <section>
+            <h2 class="quiz-question3">What are your symptoms? Select all that apply.</h2>
+            <div class="symptoms">
+              <ul class="column1">
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="A" id="16"><label for="16">Monopolies of capital & power</label></li>
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="B" id="17"><label for="17">A lack of social services</label></li>
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="C" id="18"><label for="18">Colonialist wars</label></li>
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="D" id="19"><label for="19">The prison-industrial complex</label></li>
+              </ul>
+
+              <ul class="column2">
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="E" id="20"><label for="20">Rising income inequality</label></li>
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="F" id="21"><label for="21">Corporate interests as de facto policy</label></li>
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="G" id="22"><label for="22">Fake news</label></li>
+                <li class="quiz-answer"><input type="checkbox" name="q3" value="H" id="23"><label for="23">Real news</label></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="buttons">
+            <input type="submit" value="Get Your Diagnosis!" />
+            <!-- <input type="reset" value="Try Again"/> -->
+          </section>
+
+        </form>
+
+<section id="overlay">
+        <div id="message">
+          <p id="myMsg"></p>
+        </div>
+            <div class="return">Return to Quiz</div>
+      </section>
+
+      </div>
+    </div>
+  </div>
+
+<script>
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+</script>
+
+</body>
+
+</html>

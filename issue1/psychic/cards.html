@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarot Reading</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src='script.js' type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+          <div id="mainContainer">
+
+      <div class="row">
+        <div class="column">
+          <div class="cards">
+          <h1>Past</h1>
+          <img id="myPicture"   onclick="choosePic()" class="cardimg" src="images/default.png">
+          <p id="myText">hi</p>
+        </div>
+        </div>
+
+        <div class="column">
+            <div class="cards">
+          <h1>Present</h1>
+          <img id="myPicture1"  onclick="choosePic1()" class="cardimg" src="images/default.png">
+        </div>
+        </div>
+
+        <div class="column">
+            <div class="cards">
+          <h1>Future</h1>
+          <img id="myPicture2"  onclick="choosePic2()" class="cardimg" src="images/default.png">
+        </div>
+      </div>
+
+
+
+</div>
+      <button onclick="startOver()">Start Over</button>
+</div>
+
+    </main>
+
+</body>
+<script>
+var myPix = new Array("images/1.png", "images/2.png", "images/3.png", "images/4.png", "images/5.png", "images/6.png", "images/7.png", "images/8.png", "images/9.png");
+var text1array = ["text for img1", "text for img2", "text for img3", "text for img4", "text for img5", "text for img6", "text for img7", "text for img8", "text for img9"];
+
+function choosePic() {
+  var randomNum = Math.floor(Math.random() * myPix.length);
+  document.getElementById("myPicture").src = myPix[randomNum];
+  document.getElementById("myText").innerHTML = text1array[randomNum];
+}
+
+function choosePic1() {
+  var randomNum = Math.floor(Math.random() * myPix.length);
+  document.getElementById("myPicture1").src = myPix[randomNum];
+}
+
+function choosePic2() {
+  var randomNum = Math.floor(Math.random() * myPix.length);
+  document.getElementById("myPicture2").src = myPix[randomNum];
+}
+
+function startOver(){
+document.getElementById('myPicture').src = "images/default.png";
+  document.getElementById('myPicture1').src = "images/default.png";
+  document.getElementById('myPicture2').src = "images/default.png";
+}
+</script>
+</html>

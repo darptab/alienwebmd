@@ -1,0 +1,126 @@
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+    cursor: url(../images/alien_cursor.png) 16 35, auto;
+}
+
+body:active{
+    cursor: url(../images/alien_cursor_press.png) 16 35, auto;
+}
+
+#top, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten, #eleven, #twelve, #thirteen {
+  height: 570px;
+  border-top: 5px solid #8096cd;
+}
+
+img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+}
+
+h1, h2 {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:50px;
+}
+
+h1{
+  font-size: 28px;
+}
+
+h2 {
+  color: #d81bd6;
+}
+
+header {
+  text-align: center;
+}
+
+.container {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pd a {
+  background-color:  #8096cd;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 34px;
+padding-right: 25px;
+
+}
+
+.pd{
+    margin-top: 200px;
+}
+
+p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.fa-angle-down {
+  font-size: 40px;
+  color: #8096cd;
+  text-align: center;
+}
+
+.fa-angle-up {
+  padding-top: 2px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  margin-left: -10px;
+  padding-right: 2px;
+}
+
+/* SCROLLBAR */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-corner {
+  background: white;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d62cd4;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Search Is My Doctor & Therapist</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <script src="libraries/p5.js" type="text/javascript"></script>
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script src="sketch.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+
+      <img draggable="false" src="images/title.gif" class="title" alt="title">
+
+      <div class="intro">
+        <h2>The U.S. healthcare system is ranked as both the worst and most expensive system among developed nations. With many of us lacking adequate access to healthcare, mental health resources, and subject to the interests of a private pharmaceutical sector, Google Seach, Yahoo! Answers, Quora, WikiHow, WebMD, and others have become our convenient and inexpensive advisors for healthcare and counseling.</h2>
+        <div class="question">What have you asked your device as consult for for a medical, mental health, social, or relationship problem?</div>
+      <div class="prompt">Anonymously add your query below!</div>
+    </div>
+
+      <div class="slideshow" style="max-width:500px">
+        <img draggable="false" class="mySlides" alt="1" src="images/1.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="2" src="images/2.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="3" src="images/3.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="4" src="images/4.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="5" src="images/5.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="6" src="images/6.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="7" src="images/7.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="8" src="images/8.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="9" src="images/9.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="10" src="images/10.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="11" src="images/11.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="12" src="images/12.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="13" src="images/13.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="14" src="images/14.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="15" src="images/15.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="16" src="images/16.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="17" src="images/17.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="18" src="images/18.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="19" src="images/19.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="20" src="images/20.png" style="width:100%">
+        <img draggable="false" class="mySlides" alt="21" src="images/21.png" style="width:100%">
+
+      </div>
+
+          <div class="query">
+
+        <p><input value="" id="name" onfocus="this.value=''"></p>
+        <p><button id="submit" onclick="clearText()">Submit</button></p>
+      </div>
+
+    </header>
+
+    <div class="list">
+      <p id="data"></p>
+    </div>
+
+  </div>
+
+  <script>
+  function clearText() {
+      document.getElementById("name").value = "";
+  }
+
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 3000); // Change image every 2 seconds
+    }
+  </script>
+
+</body>
+
+</html>

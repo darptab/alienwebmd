@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* start all css with a reset */
+
+/* GENERAL LAYOUT */
+
+* {
+  margin: 0px;
+  padding: 0px
+}
+
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background-color: white;
+  overflow: hidden;
+  cursor: url(../images/alien_cursor.png) 16 35, auto;
+}
+
+body:active {
+  cursor: url(../images/alien_cursor_press.png) 16 35, auto;
+}
+
+a {
+  color: #3b56a6;
+}
+
+#man {
+  float: left;
+  margin-left: 10px;
+  margin-top: 70px;
+}
+
+.container {
+  float: left;
+  margin-top: 1.3rem;
+  margin-left: 5rem;
+  width: 480px;
+}
+
+footer {
+  margin-top: 30px;
+  margin-left: 420px;
+}
+
+/* TYPE */
+
+h1 {
+  color: #3b56a6;
+  font-size: 40px;
+}
+
+h2 {
+  color: #73cee6;
+  font-size: 30px;
+  padding-bottom: 0px;
+  margin-left: -50px;
+}
+
+h3 {
+  color: #654a69;
+  font-size: 17px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+/* FORMATTING THE FORM */
+
+article {
+  font-size: 16px;
+  line-height: 2em;
+}
+
+.field1 {
+  float: left;
+  margin-bottom: 10px;
+  display: inline;
+  width: 220px;
+}
+
+.field2 {
+  float: left;
+  margin-bottom: 10px;
+    width: 220px;
+    margin-left: 5px;
+  display: inline;
+}
+
+.field3 {
+    clear:both;
+  margin-bottom: 10px;
+  width: 450px;
+}
+
+input[type=text] {
+  padding: 2px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  /* height: 40px; */
+  width: 98%;
+  border: 3px solid #8bdaef;
+  border-radius: 4px;
+  outline: none;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+}
+
+input[type=text]:focus {
+  font-family: "Comic Sans MS", sans-serif;
+  border: 3px solid #3b56a6;
+  font-size: 16px;
+}
+
+input[type=submit] {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border-bottom: 4px solid #3b56a6;
+  border-right: 4px solid #3b56a6;
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  width: 45%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: #a3c1f8;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 18px;
+  color: #3b56a6;
+  cursor: url(../images/alien_cursor_hover.png) 16 35, auto;
+}
+
+input[type=submit]:active {
+  background: white;
+  border-bottom: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 4px solid #3b56a6;
+  border-left: 4px solid #3b56a6;
+}
+
+input[type=reset] {
+  float: left;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-bottom: 4px solid #5daec3;
+  border-right: 4px solid #5daec3;
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  width: 45%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: #e3f7fc;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 18px;
+  color: #5daec3;
+  cursor: pointer;
+}
+
+input[type=reset]:active {
+  background: white;
+  border-bottom: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 4px solid #5daec3;
+  border-left: 4px solid #5daec3;
+}
+
+input[type=radio] {
+  margin-left: 20px;
+  height: 16px;
+  margin-right: 2px;
+}
+
+/* BORDER AROUND WHOLE SITE */
+
+#top, #bottom, #left, #right {
+  background: #73cee6;
+  position: fixed;
+}
+
+#left, #right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+#top, #bottom {
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+#top {
+  top: 0;
+}
+
+#bottom {
+  bottom: 0;
+}
+
+/* OVERLAY */
+
+#overlay {
+  position: fixed;
+  top: 10px;
+  left: 420px;
+  bottom: 20px;
+  right: 20px;
+  width: 600px;
+  background-image: url("images/speechbubble.png");
+  background-repeat: no-repeat;
+  background-position: top 20px left 0px;
+  background-color: rgba(255, 255, 255, 1);
+  display: none;
+}
+
+#message {
+  position: relative;
+  top: 80px;
+  left: 90px;
+  width: 380px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #243a72;
+  padding: 30px;
+}
+
+#fader {
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.tryagain {
+  position: absolute;
+  top: 520px;
+  left: 230px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border-bottom: 4px solid #3b56a6;
+  border-right: 4px solid #3b56a6;
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  background: #a3c1f8;
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 16px;
+  color: #3b56a6;
+  cursor: pointer;
+}
+
+.leftsparkle {
+  position: absolute;
+  left: 18px;
+  top: 260px;
+}
+
+.rightsparkle {
+  position: absolute;
+  right: 15px;
+  top: 260px;
+}
